@@ -1,0 +1,29 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+    <include file="struts-default.xml"/>
+    <package name="ljs" extends="struts-default">
+    
+    	<action name="booklist" class="ljs.Actions" method="findAllbooks">
+            <result name="list">booklist.jsp</result>
+        </action>
+        
+        <action name="delete" class="ljs.Actions" method="Delete">
+            <result name="success">Success.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+    
+        <action name="detail" class="ljs.Actions" method="Edit">
+            <result name="success">Detail.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+        <action name="findbook" class="ljs.Actions" method="findbook">
+            <result name="success">booklist.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        
+    </package>
+</struts>
